@@ -24,8 +24,9 @@ body {
 }
 
 main {
-    margin: 0 200px 0 200px;
+    margin: 0 200px;
     position: relative;
+    align-items: center;
 }
 
 .landing {
