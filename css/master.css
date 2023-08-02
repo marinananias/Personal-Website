@@ -26,7 +26,6 @@ body {
 main {
     margin: 0 200px;
     position: relative;
-    align-items: center;
 }
 
 .landing {
@@ -133,7 +132,7 @@ main {
 }
 
 .track {
-    position: fixed;
+    position: relative;
     height: 440px;
     width: 440px;
 }
