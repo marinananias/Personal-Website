@@ -132,7 +132,7 @@ main {
 }
 
 .track {
-    position: relative;
+    position: fixed;
     height: 440px;
     width: 440px;
 }
