@@ -1,11 +1,13 @@
 <!-- Personal Website
 ● AUTHOR: Marina Amorim Ananias
-● DATE: July, 2023
+● DATE: March, 2024
 ● ACKNOWLEDGEMENTS/CODE INSPIRATION: 
     Loading sound wave: https://codepen.io/yomateo/pen/ypbNrJ
-    Carousel: https://codepen.io/dcode-software/pen/BaRMvJo
-    Scrow down arrow: https://codepen.io/matthewhirsch/pen/qOxmoz
-    Scrow down reveal animation: https://codepen.io/alvarotrigo/pen/PoKamZy -->
+    Carousel:
+    Carousel Customization: https://codepen.io/desandro/pen/XJYPrm
+    Scrow down reveal animation: https://codepen.io/alvarotrigo/pen/PoKamZy 
+    Some colored icons: https://icons8.com/icon/40670/c-programming
+-->
 
 <!doctype html>
 <html lang="en">
@@ -17,25 +19,33 @@
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
     <style>
         body {
-            font-family: 'Lato';font-size: 22px;
+            font-family: 'Lato'; font-size: 22px;
         }
     </style>
-    <!-- Icons Library -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" type='text/css'>
     <!-- Meta Data -->
     <meta charset="UTF-8">
     <meta name="description" content="Marina's Website">
-    <meta name="keywords" content="Music Technology, Computer Science, Web Development, Intern">
+    <meta name="keywords" content="Music Technology, Computer Science, Web Development, Intern, Software Engineer, Music, Neuroscience">
     <meta name="author" content="Marina Ananias">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marina Ananias</title>
     <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" type='text/css'> <!--Icons Library-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="css/flickity.css" media="screen">
+
 </head>
 
 <body>
-    <section class="landing">
-        <main>
+
+    <!-- Navbar -->
+    <!-- Navbar on small screens -->
+
+    <div class="container">
+
+        <!-- Landing Page -->
+        <div class="landing">
             <div class="greetings-pt">
                 <h1>Oi!</h1>
             </div>
@@ -54,258 +64,242 @@
                 <div class="bar"> </div>
                 <div class="bar"> </div>
             </div>
-            <div class="scroll-down"></div>
-        </main>
-    </section>
+        </div>
 
-    <section class="about-me">
-        <main>
-            <div class="about-text reveal"> 
-             <h4>About Me</h4>
+        <!-- About Me Section -->
+        <div class="about-me">
+            <div class="subp-text about reveal"> 
+                <h4>About Me</h4>
             </div>
             <div class="about-me-content reveal">
-                <div class="profile-picture">
-                    <img src="images/Profile (about-me).jpeg" alt="Profile Picture" style="max-height: 430px; border-radius: 10px; margin: 0 0 50px 0;">
-                </div>
+                <img src="images/p3.jpg" alt="Profile Picture" style="width: 40%; border-radius: 10px; margin: 0 0 7% 0;">
                 <div class="box-button">
                     <div class="about-me-box">
-                        <p>As a <a href="#">computer science and music double major with a concentration in neuroscience</a>, I am intrigued by the profound connections that intertwine these fields.</p><br>
-                        <p>With every note played and code written, I embrace the pursuit of knowledge, the joy of artistic expression, and the exploration of the human mind. The people around me, alongside <a href="#">courage, curiosity, and creativity</a> are the main instruments that accompany me in every endeavor.</p><br>
-                        <p><i>Welcome to where melodies blend with circuits and code performs a duet with songs in harmony.</i></p>
+                        <span>Originally from Maceió, Brazil, I'm currently pursuing a Bachelor's degree in <span style="color: #ff0558;">Computer Science and Music with a minor in Neuroscience</span> at Grinnell College, Iowa. I'm fascinated by the intersection of these fields and passionate about exploring interdisciplinary projects that leverage the connections between them.</span><br>
+                        <span>With every note played and code written, I embrace the pursuit of knowledge, the joy of artistic expression, and the exploration of the human mind. The people around me, alongside <span style="color: #ff0558;">courage, curiosity, and creativity</span> are the main instruments that accompany me in every endeavor.</span><br>
                     </div>
-                    <a target="_blank" class="about-me-button" href="https://drive.google.com/file/d/1ikp92CsWb0OVUR1qnC_8IUCxwJ8r9x9d/view?usp=sharing">Explore My Resume</a>  
+                    <a target="_blank" class="about-me-button" href="https://drive.google.com/file/d/1KfpEfHr3MAv1Kj8zi8FjB6QW-8hl-SoX/view?usp=sharing">Explore My Resume</a>  
                 </div>
             </div>
-        </main>
-    </section>
+        </div>
 
-    <section class="coding">
-        <main>
-            <div class="coding-text reveal">
+        <!-- Coding Section -->
+        <div class="subpage">
+            <div class="subp-text coding reveal">
                 <h4>Coding</h4>
-            </div>
-            <div class="coding-content reveal">
-                
-                <div class="coding-experience">
-                        <h5>Experience</h5>
-                    <div class="track">
-                        <div class="track__slide"> 
-                            <div class="coding-slide"><h6>Skills</h6></div>
-                            <div class="skills_icons">
-                                <div class="skills_icons--text">
-                                    <i class="fab fa-css3-alt fa-2x"></i>     
-                                    <p>CSS</p>       
-                                </div>
-                                <div class="skills_icons--text">
-                                    <i class="fab fa-html5 fa-2x"></i> 
-                                    <p>HTML</p>       
-                                </div>
-                                <div class="skills_icons--text">
-                                    <i class="fab fa-python fa-2x"></i>  
-                                    <p>Python</p>       
-                                </div>      
-                                <div class="skills_icons--text">                        
-                                    <i class="fab fa-js fa-2x"></i>    
-                                    <p>JavaScript</p>       
-                                </div> 
-                                <div class="skills_icons--text">
-                                    <img src="images/c++.png" alt="C++">
-                                    <p>C++</p>       
-                                </div>         
-                                <div class="skills_icons--text">
-                                    <img src="images/scheme.png" alt="Scheme">
-                                    <p>Scheme</p>       
-                                </div>                     
-                            </div>
-                        </div>
-                        <div class="track__slide"> 
-                            <div class="coding-slide"><h6>Music Technology Intern</h6></div>
-                            <a target="_blank" class="nerdmusician-link" href="https://www.musiconerd.com/" style="text-decoration:underline;">Nerd Musician</a>					
-                            <div class="coding-internship">
-                                <p>• Coded, designed enclosure, welded components, and assembled <a href="#"><i>MIDI Songwriter</i></a> prototype.</p><br>
-                                <p>• Programmed <a href="#">3</a> musical instrument digital interfaces prototypes.</p><br>
-                                <p>• Supported <a href="#">800+</a> students online to debug codes, fix circuits, and clarify electronic questions.</p>
-                            </div>
-                        </div>
-                        <div class="track__slide"> 
-                            <div class="coding-slide"><h6>Selected Courses</h6></div>
-                            <div class="coding-courses">
-                                <p>• Quantum Computing Camp with <i><a href="#">MIT</a></i> Researchers, <i>Code Connects</i>.</p><br>
-                                <p>• Aboutme.com, <i>Girls Teaching Girls to Code - <a href="#">Stanford University</a></i>.</p><br>
-                                <p>• Interactive Programming in Python, <i><a href="#">Rice University</a> - Coursera</i>.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            </div> <!--coding-text-->
 
-                <div class="coding-projects">
-                    <h5>Projects</h5>
-                    <div class="track">
-                        <div class="track__slide"> 
-                            <div class="coding-slide">
+            <div class="content reveal">
+
+                <!-- Flickity HTML init -->
+                <div class="gallery g-coding js-flickity"
+                  data-flickity-options='{ "wrapAround": true }'>
+
+                    <div class="gallery-cell coding">
+                        <div class="cell-content">
+                            <img src="images/MIDI Songwriter (coding).JPG" alt="MIDI Songwriter" style="display: flex; height: 100%;">
+                            <div class="cell-container">
                                 <h6>MIDI Songwriter</h6>
-                                    <div class="coding-slide-img"><video poster="images/MIDI Songwriter (coding).JPG" height="200px" controls>
-                                        <source src="videos/midisongwriter-new.mp4" type="video/mp4">
-                                        <source src="videos/midisongwriter.mov" type="video/mov">
-                                        Your browser does not support the video tag.
-                                    </video></div>
-                                <a target="_blank" class="git-songwriter" href="https://github.com/marinananias/MIDI-Songwriter-Prototype" style="text-decoration:underline;">Explore More</a>					
-                            </div>
-                        </div>
-                        <div class="track__slide"> 
-                            <div class="coding-slide">
+                                <a href="https://github.com/marinananias/MIDI-Songwriter-Prototype" title="github" target="_blank" style="color: #fef7f3; margin: 0 20px;" role="button">
+                                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                                </a>				
+                            </div> <!--cell-container-->
+                        </div> <!--cell-content-->
+                    </div> <!--gallery-cell-->
+                  
+                    <div class="gallery-cell coding">
+                        <div class="cell-content">
+                            <img src="images/MIDIKeyboard 151 (coding).png" alt="MIDI Keyboard" style="display: flex; height: 100%;">
+                            <div class="cell-container">
                                 <h6>MIDI Keyboard</h6>
-                                <div class="coding-slide-img"> <img src="images/MIDIKeyboard 151 (coding).png" alt="MIDI Keyboard" style="max-height: 200px;"> </div>
-                                <!-- <p>Functional virtual keyboard that allows users to play music using their mouse.</p><br> -->
-                                <a target="_blank" class="git-keyboard" href="https://github.com/marinananias/MIDI-Keyboard" style="text-decoration:underline;">Explore More</a>					
-                            </div>
-                        </div>
-                        <div class="track__slide"> 
-                            <div class="coding-slide">
+                                <a href="https://github.com/marinananias/MIDI-Keyboard" title="github" target="_blank" style="color: #fef7f3; margin: 0 20px;" role="button">
+                                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                                </a>	
+                            </div> <!--cell-container-->
+                        </div> <!--cell-content-->
+                    </div> <!--gallery-cell-->
+
+                    <div class="gallery-cell coding">
+                        <div class="cell-content">
+                            <img src="images/This Website!.png" alt="This Website!" style="display: flex; height: 100%;">
+                            <div class="cell-container">
                                 <h6>This Website!</h6>
-                                <div class="coding-slide-img"> <img src="images/This Website!.png" alt="This Website!" style="max-height: 200px;"> </div>
-                                <a target="_blank" class="git-website" href="https://github.com/marinananias/Website" style="text-decoration:underline;">Explore More</a>					
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </main>
-    </section>
-
-    <section class="making-music">
-        <main>
-            <div class="music-text reveal">
-                <h4>Making Music</h4>
-            </div>
-            <div class="music-content reveal">
+                                <a href="https://github.com/marinananias/Website" title="github" target="_blank" style="color: #fef7f3; margin: 0 20px;" role="button">
+                                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                                </a>	
+                            </div> <!--cell-container-->
+                        </div> <!--cell-content-->
+                    </div> <!--gallery-cell-->
+                </div> <!--gallery-->
                 
-                <div class="music-experience">
-                    <h5>Experience</h5>
-                    <div class="track">
-                        <div class="track__slide"> 
-                            <div class="music-slide"><h6>Instruments</h6></div>
-                                <div class="skills_icons">
-                                    <div class="skills_icons--text">
-                                        <img src="images/microphone.png" alt="Microphone">
-                                        <p>Voice</p>       
-                                    </div>
-                                    <div class="skills_icons--text">
-                                        <img src="images/piano.png" alt="Piano">
-                                        <p>Piano</p>      
-                                    </div> 
-                                    <div class="skills_icons--text">
-                                        <img src="images/guitar.png" alt="Guitar">
-                                        <p>Guitar</p>       
-                                    </div>  
-                                    <div class="skills_icons--text">                        
-                                        <img src="images/ukulele.png" alt="Ukulele">
-                                        <p>Ukulele</p>         
-                                    </div> 
-                                    <div class="skills_icons--text">
-                                        <img src="images/flute.png" alt="Flute">
-                                        <p>Flute</p>        
-                                    </div>                         
-                                </div>
-                            </div>
-                        <div class="track__slide"> 
-                            <div class="music-slide"><h6>Recording Engineer,<br>Stage Manager & Usher</h6></div>
-                            <a target="_blank" class="grinnell-link" href="https://www.grinnell.edu/" style="text-decoration:underline;">Grinnell College</a>			
-                            <div class="music-professional">
-                                <p>• Operated recording equipment during <a href="#">12</a> live performances, ensuring high-quality audio.</p><br>
-                                <p>• Collaborated with <a href="#">20+</a> performers, making their creative vision possible.</p><br>
-                                <p>• Administered programs, ensuring smooth flow of audience for events w/average attendance of <a href="#">50</a> people.</p>
-                            </div>
+                <div class="skills">
+                    <div class="skills_icons">
+                        <div class="skills_icons--text">
+                            <i class="fab fa-python fa-2x"></i>  
+                            <p>Python</p>       
+                        </div>      
+                        <div class="skills_icons--text">                        
+                            <i class="fab fa-java fa-2x"></i>    
+                            <p>Java</p>       
+                        </div> 
+                        <div class="skills_icons--text">
+                            <img src="images/c.png" alt="C">
+                            <p>C</p>       
                         </div>
-                        <div class="track__slide"> 
-                            <div class="music-slide"><h6>Selected Courses</h6></div>
-                            <div class="music-courses">
-                                <p>• The Art of Music Production, <i><a href="#">Berklee College of Music</a> - Coursera</i>.</p><br>
-                                <p>• Arranging for Songwriters, <i><a href="#">Berklee College of Music</a> - Coursera</i>.</p><br>
-                                <p>• Music Theory, <i><a href="#">Grinnell College</a></i>.</p>
-                            </div>
+                        <div class="skills_icons--text">
+                            <img src="images/c++.png" alt="C++">
+                            <p>C++</p>       
                         </div>
+                        <div class="skills_icons--text">
+                            <i class="fab fa-css3-alt fa-2x"></i>     
+                            <p>CSS</p>       
+                        </div>
+                        <div class="skills_icons--text">
+                            <i class="fab fa-html5 fa-2x"></i> 
+                            <p>HTML</p>       
+                        </div>
+                        <div class="skills_icons--text">                        
+                            <i class="fab fa-linux fa-2x"></i>    
+                            <p>Linux</p>       
+                        </div>                           
                     </div>
-                </div>
+                </div> <!--skills-->
 
-                <div class="music-projects">
-                    <h5>Projects</h5>
-                    <div class="track">
-                        <div class="track__slide"> 
-                            <div class="music-slide"
-                                ><h6><i>Broken Smile</i></h6>
-                                <div class="music-slide-img"> <a target="_blank" href="https://drive.google.com/file/d/1k5nBmczmfO2bPBII5CZnReM9Mlr_tC0P/view?usp=sharing"> <img src="images/broken-smile.png" alt="Broken Smile" style="max-height: 220px;"></a></div>
+            </div> <!--content-->
+        </div> <!-- coding -->
+
+        <!-- Making Music Section -->
+        <div class="subpage">
+
+            <div class="subp-text music reveal">
+                <h4>Making Music</h4>
+            </div> <!--music-text-->
+
+            <div class="content reveal">
+                <!-- Flickity HTML init -->
+                <div class="gallery g-music js-flickity"
+                data-flickity-options='{ "wrapAround": true }'>
+
+                    <div class="gallery-cell music">
+                        <div class="cell-content">
+                            <a target="_blank" href="https://drive.google.com/file/d/1k5nBmczmfO2bPBII5CZnReM9Mlr_tC0P/view?usp=sharing"><img src="images/broken-smile.png" alt="Broken Smile" style="max-height: 220px;"></a>
+                            <div class="cell-container">
+                                <h6><i>Broken Smile</i></h6>
                                 <audio controls>
                                     <source src="audios/broken-smile.mp3" type="audio/mpeg">
                                     Your browser does not support the audio element.
-                                </audio>
-                            </div>
-                        </div>
-                        <div class="track__slide"> 
-                            <div class="music-slide"
-                                ><h6><i>Expectations</i></h6>
-                                <div class="music-slide-img"> <a target="_blank" href="https://drive.google.com/file/d/1OycnjHYkNaXXYicyRPM-A519TVFt1bRA/view?usp=sharing"><img src="images/expectations.png" alt="Expectations" style="max-height: 220px;"></a></div>
+                                </audio>			
+                            </div> <!--cell-container-->
+                        </div> <!--cell-content-->
+                    </div> <!--gallery-cell-->
+
+                    <div class="gallery-cell music">
+                        <div class="cell-content">
+                            <a target="_blank" href="https://drive.google.com/file/d/1OycnjHYkNaXXYicyRPM-A519TVFt1bRA/view?usp=sharing"><img src="images/expectations.png" alt="Expectations" style="max-height: 220px;"></a>
+                            <div class="cell-container">
+                                <h6><i>Expectations</i></h6>
                                 <audio controls>
                                     <source src="audios/expectations.mp3" type="audio/mpeg">
                                     Your browser does not support the audio element.
-                                </audio>
-                            </div>
-                        </div>
-                        <div class="track__slide"> 
-                            <div class="music-slide">
+                                </audio>		
+                            </div> <!--cell-container-->
+                        </div> <!--cell-content-->
+                    </div> <!--gallery-cell-->
+
+                    <div class="gallery-cell music">
+                        <div class="cell-content">
+                            <img src="images/luz.png" alt="Luz" style="max-height: 140px;">
+                            <div class="cell-container">
                                 <h6><i>Luz</i></h6>
-                                <div class="music-slide-img"> <img src="images/luz.png" alt="Luz" style="max-height: 200px;"></div>
                                 <audio controls>
                                     <source src="audios/luz.mp3" type="audio/mpeg">
                                     Your browser does not support the audio element.
-                                </audio>
-                            </div>
-                        </div>
-                    </div>
-                </div>   
-            </div>
-        </main>
-    </section>
+                                </audio>	
+                            </div> <!--cell-container-->
+                        </div> <!--cell-content-->
+                    </div> <!--gallery-cell-->
+                </div> <!--gallery-->
 
-    <section class="contact-me">
-        <main>
-            <div class="contact-content">
-                <div class="signature">
-                    <img src="images/logo.png" alt="Signature Logo" style="max-height: 80px; opacity: 0.7; transform: rotate(-7deg);">
-                </div>
-                <div class="social-icons">
-                    <div class="social-icons--each">
-                        <a href="mailto:ananias.marina@gmail.com" title="email" target="_blank" style="color: #fef7f3; margin: 0 40px;" role="button">
+                <div class="skills">
+                    <div class="skills_icons">
+                        <div class="skills_icons--text">
+                            <img src="images/microphone.png" alt="Microphone">
+                            <p>Voice</p>       
+                        </div>
+                        <div class="skills_icons--text">
+                            <img src="images/piano.png" alt="Piano">
+                            <p>Piano</p>      
+                        </div> 
+                        <div class="skills_icons--text">
+                            <img src="images/guitar.png" alt="Guitar">
+                            <p>Guitar</p>       
+                        </div>  
+                        <div class="skills_icons--text">                        
+                            <img src="images/ukulele.png" alt="Ukulele">
+                            <p>Ukulele</p>         
+                        </div> 
+                        <div class="skills_icons--text">
+                            <img src="images/flute.png" alt="Flute">
+                            <p>Flute</p>        
+                        </div>                         
+                    </div>
+                </div> <!--skills-->
+            </div> <!--content-->
+        </div>
+
+        <!-- Contact Me -->
+        <div class="subpage">
+            <div class="subp-text contact reveal">
+                <h4>Contact Me</h4>
+            </div> <!--contact-text-->
+
+            <div class="contact-content reveal">
+                <img src="images/logo.png" alt="Signature Logo" class="signature-logo">
+                
+                <!-- Content positioned on top of the image -->
+                <div class="contact-subcontent">
+                    <p>Every great collaboration starts with a simple hello. Let's create something amazing!</p>
+
+                    <div class="contact-mail">
+                        <a href="mailto:ananias.marina@gmail.com" title="email" target="_blank" role="button" style="margin-right: 4%;">
                             <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
-                        </a>  
-                    </div>  
-                    <div class="social-icons--each">
-                        <a href="https://www.linkedin.com/in/marinaananias/" title="linkedin" target="_blank" style="color: #fef7f3; margin: 0 40px;" role="button">
-                            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
                         </a>
-                    </div>
-                    <div class="social-icons--each">
-                        <a href="https://github.com/marinananias" title="github" target="_blank" style="color: #fef7f3; margin: 0 40px;" role="button">
-                            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                        <a href="mailto:ananias.marina@gmail.com" title="email" style="text-decoration: underline; color: #332e2e;">
+                            <p>ananias.marina@gmail.com</p>
                         </a>
-                    </div>
-                    <div class="social-icons--each">
-                        <a href="https://on.soundcloud.com/xwLpJ" title="soundcloud" target="_blank" style="color: #fef7f3; margin: 0 40px;" role="button">
-                            <i class="fab fa-soundcloud fa-2x" aria-hidden="true"></i>
-                        </a> 
-                    </div>
-                </div>
-            </div>
-        </main>
-    </section>
+                    </div> <!--contact-mail-->
+
+                    <div class="social-icons">
+                        <div class="social-icons--each">
+                            <a href="https://www.linkedin.com/in/marinaananias/" title="linkedin" target="_blank" role="button">
+                                <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                            </a>
+                        </div> <!--social-icons--each--> 
+                        <div class="social-icons--each">
+                            <a href="https://github.com/marinananias" title="github" target="_blank" role="button">
+                                <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                            </a>
+                        </div> <!--social-icons--each--> 
+                        <div class="social-icons--each">
+                            <a href="https://on.soundcloud.com/xwLpJ" title="soundcloud" target="_blank" role="button">
+                                <i class="fab fa-soundcloud fa-2x" aria-hidden="true"></i>
+                            </a> 
+                        </div> <!--social-icons--each--> 
+                    </div> <!--social-icons-->
+
+                </div> <!-- contact-subcontent-->
+            </div> <!--contact-content-->
+        </div> <!--subpage-->
+
+    </div> <!--container-->
 </body>
 
 <footer>
-    <p class="copyright-text">© Copyright 2023 Marina Ananias</p>
+    <p class="copyright-text">© Copyright 2024 Marina Ananias</p>
 </footer>
 
 <!-- JavaScript -->
 <script src="/js/main.js"></script>
+<script src="/js/flickity.pkgd.min.js"></script>
 
 </html>

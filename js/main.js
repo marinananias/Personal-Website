@@ -7,43 +7,6 @@
 //     Scrow down arrow: https://codepen.io/matthewhirsch/pen/qOxmoz
 //     Scrow down reveal animation: https://codepen.io/alvarotrigo/pen/PoKamZy
 
-document.querySelectorAll(".track").forEach((track) => {
-    const slides = track.querySelectorAll(".track__slide");
-    const buttonsHtml = Array.from(slides, () => {
-      return `<span class="track__button"></span>`;
-    });
-  
-    track.insertAdjacentHTML(
-      "beforeend",
-      `
-          <div class="track__nav">
-              ${buttonsHtml.join("")}
-          </div>
-      `
-    );
-  
-    const buttons = track.querySelectorAll(".track__button");
-  
-    buttons.forEach((button, i) => {
-      button.addEventListener("click", () => {
-        // un-select all the slides
-        slides.forEach((slide) =>
-          slide.classList.remove("track__slide--selected")
-        );
-        buttons.forEach((button) =>
-          button.classList.remove("track__button--selected")
-        );
-  
-        slides[i].classList.add("track__slide--selected");
-        button.classList.add("track__button--selected");
-      });
-    });
-  
-    // Select the first item on page load
-    slides[0].classList.add("track__slide--selected");
-    buttons[0].classList.add("track__button--selected");
-  });
-
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
 
@@ -61,4 +24,3 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
-  
