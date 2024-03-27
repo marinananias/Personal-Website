@@ -176,7 +176,8 @@ a {
 }
 
 .about-me-button {
-    background: linear-gradient(to bottom right, #ff0558, #FF9A5A);
+    background: linear-gradient(to bottom right, rgb(85, 62, 214), rgb(85, 211, 216));
+    /* x, y+149, z+2*/
     border: 0;
     border-radius: 10px;
     line-height: 150%;
@@ -450,7 +451,7 @@ span {
 }
 
 .subp-text.about {
-    text-decoration-color: #ff0558;
+    text-decoration-color: #553ed6;
 }
 
 .subp-text.coding {
@@ -462,7 +463,6 @@ span {
 }
 
 .subp-text.contact {
-    text-decoration-color: #553ed6;
     text-decoration-color: #ff0558;
     position: relative;
     z-index: 2;
