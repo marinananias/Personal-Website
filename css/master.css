@@ -39,17 +39,92 @@ Extra large devices (large laptops and desktops, 1200px and up)
 }
 
 body {
-    background-color: #fef7f3;
     width: 100%;
     height: auto;
     word-spacing: 5px;
+    background-color: #fff7f4;
 }
 
 .container {
-    margin: 0 15%;
     position: relative;
 }
 
+/* +--------+---------------------------------------------------------
+// | NavBar |
+// +--------+ */
+
+nav {
+    width: 300px;
+    background: #ff055873;
+    -webkit-clip-path: circle(24px at 30px 24px);
+    clip-path: circle(24px at 32px 24px);
+    -webkit-transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+    transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+  }
+
+nav:hover {
+    background: #ffffff;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transition-duration: 0.75s;
+    transition-duration: 0.75s;
+    -webkit-clip-path: circle(390px at 225px 24px);
+    clip-path: circle(390px at 150px 24px);
+}
+
+li {
+    list-style: none;
+}
+
+#nav {
+    display: block;
+    line-height: 50px;
+    padding: 0 20px;
+    color: inherit;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    list-style: none;
+}
+
+#nav:hover { background: #0096bc7b; }
+
+#nav:active { background: #0097BC; }
+
+.navicon {
+    padding: 23px 20px;
+    cursor: pointer;
+    -webkit-transform-origin: 32px 24px;
+    -ms-transform-origin: 32px 24px;
+    transform-origin: 32px 24px;
+}
+
+.navicon div {
+    position: relative;
+    width: 20px;
+    height: 2px;
+    background: #0097BC;
+}
+
+.navicon div:before,
+.navicon div:after {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: #0097BC;
+    position: absolute;
+}
+
+.navicon div:before { top: -7px; }
+
+.navicon div:after { top: 7px; }
+  
 /* +---------+--------------------------------------------------------
 // | Landing |
 // +---------+ */
@@ -59,6 +134,7 @@ body {
     justify-content: center;
     text-align: center;
     margin: 2.5% 0;
+    padding: 0 15%;
 }
 
 .sound-waves {
@@ -134,6 +210,7 @@ body {
     margin: 2.5% 0;
     width: 100%;
     height: auto;
+    padding: 0 15%;
 }
 
 /* Photo + (Text + Button) */
@@ -164,8 +241,9 @@ body {
 }
 
 a {
-    color: #ff0558;
     text-decoration: none;
+    color: #ff0558;
+    background: linear-gradient(to bottom right, #553ed6, #553ed6c5);
     background-image: linear-gradient(to bottom, transparent 20%, currentColor 21%);
 
     background-position: 0 1em;
@@ -176,8 +254,7 @@ a {
 }
 
 .about-me-button {
-    background: linear-gradient(to bottom right, rgb(85, 62, 214), rgb(85, 211, 216));
-    /* x, y+149, z+2*/
+    background: linear-gradient(to bottom right, #553ed6, #553ed6c5);
     border: 0;
     border-radius: 10px;
     line-height: 150%;
@@ -200,8 +277,9 @@ a {
 }
 
 .about-me-button:not([disabled]):hover {
-    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem #ff05588f, .125rem .125rem 1rem #ff05588f;
 }
+
 
 /* +-------------------------+----------------------------------------
 // | Coding AND Making Music |
@@ -213,6 +291,7 @@ a {
     flex-direction: column;
     width: 100%;
     height: auto;
+    padding: 0 15%;
 }
 
 .content {
@@ -249,7 +328,7 @@ a {
 }
 
 .gallery {
-    background: #fef7f3;
+    background: #fff7f4;
     margin: 2% 0 8% 0; /* trbl */
 }
 
@@ -383,8 +462,8 @@ a {
     margin: 0 24%; 
 }
 
-.social-icons--each:hover {
-    color: #ffffff; 
+#soc-icon:hover {
+    color: #553ed6;    
 }
 
 footer {
@@ -417,8 +496,7 @@ h3 {
 
 h4 {
     font-size: 50px;
-    color: #332e2e;
-    padding-bottom: 50px;
+    padding-bottom: 5%;
 }
 
 h5 {
@@ -429,7 +507,7 @@ h5 {
 
 h6 {
     font-size: 28px;
-    color: #ffffff;
+    color: #fff7f4;
     margin-bottom: 20%;
 }
 
@@ -446,30 +524,30 @@ span {
 .subp-text {
     text-decoration-line: underline;
     text-underline-offset: 12px;
-    /* text-decoration-style: wavy; */
     text-decoration-thickness: 5px;
+    text-decoration-color: #ff0558;
 }
 
 .subp-text.about {
-    text-decoration-color: #553ed6;
+    color: #553ed6;
 }
 
 .subp-text.coding {
-    text-decoration-color: #0097BC;
+    color: #0097BC;
 }
 
 .subp-text.music {
-    text-decoration-color: #BFD73E;
+    color: #BFD73E;
 }
 
 .subp-text.contact {
-    text-decoration-color: #ff0558;
+    color: #553ed6;
     position: relative;
     z-index: 2;
 }
 
 .copyright-text {
-    color: #fef7f3;
+    color: #fff7f4;
     font-size: 19px;
 }
 
