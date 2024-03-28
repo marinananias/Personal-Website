@@ -63,7 +63,9 @@ nav {
     position: absolute;
     top: 10px;
     left: 50px;
-  }
+    font-family: "Lato", Helvetica, monospace;  
+    font-size: 20px;
+}
 
 nav:hover {
     background: #ffffff;
@@ -97,7 +99,7 @@ li {
 #nav:active { background: #0097BC; }
 
 .navicon {
-    padding: 23px 20px;
+    padding: 23px 22px;
     cursor: pointer;
     -webkit-transform-origin: 32px 24px;
     -ms-transform-origin: 32px 24px;
@@ -108,7 +110,7 @@ li {
     position: relative;
     width: 20px;
     height: 2px;
-    background: #0097BC;
+    background: #fff7f4;
 }
 
 .navicon div:before,
@@ -117,7 +119,7 @@ li {
     content: "";
     width: 20px;
     height: 2px;
-    background: #0097BC;
+    background: #fff7f4;
     position: absolute;
 }
 
@@ -286,7 +288,7 @@ a {
 // +-------------------------+ */
 .subpage {
     text-align: left;
-    margin: 0 0 10% 0; /* trbl */
+    margin-bottom: 10%;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -419,6 +421,10 @@ a {
 /* +------------+-----------------------------------------------------
 // | Contact Me |
 // +------------+ */
+.subpage.contact {
+    margin-bottom: 2%;
+}
+
 .contact-content {
     display: flex;
     flex-direction: row;

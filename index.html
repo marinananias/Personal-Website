@@ -49,18 +49,18 @@
             </div>
 
             <ul>
-                <li><a id="nav" href="#">Home</a></li>
-                <li><a id="nav" href="#">About Me</a></li>
-                <li><a id="nav" href="#">Coding</a></li>
-                <li><a id="nav" href="#">Making Music</a></li>
-                <li><a id="nav" href="#">Contact Me</a></li>
+                <li><a id="nav" href="#Home">Home</a></li>
+                <li><a id="nav" href="#About">About Me</a></li>
+                <li><a id="nav" href="#Coding">Coding</a></li>
+                <li><a id="nav" href="#Music">Making Music</a></li>
+                <li><a id="nav" href="#Contact">Contact Me</a></li>
             </ul>
         </nav>
 
         <!-- Navbar on small screens -->
       
         <!-- Landing Page -->
-        <div class="landing">
+        <div class="landing" id="Home">
             <div class="greetings-pt">
                 <h1>Oi!</h1>
             </div>
@@ -82,12 +82,12 @@
         </div>
 
         <!-- About Me Section -->
-        <div class="about-me reveal">
+        <div class="about-me" id="About">
             <div class="subp-text about reveal"> 
                 <h4>About Me</h4>
             </div>
             <div class="about-me-content reveal">
-                <img src="images/p2.png" alt="Profile Picture" style="width: 37%; border-radius: 10px; margin: 0 0 7% 0;">
+                <img src="images/p2.png" alt="Profile Picture" style="width: 37%; border-radius: 10px; margin: 1% 0 7% 0;">
                 <div class="box-button">
                     <div class="about-me-box">
                         <span>Originally from Maceió, Brazil, I'm currently pursuing a Bachelor's degree in <span style="color: #ff0558;">Computer Science and Music with a minor in Neuroscience</span> at Grinnell College, Iowa. I'm fascinated by the intersection of these fields and passionate about exploring interdisciplinary projects that leverage the connections between them.</span><br>
@@ -99,7 +99,7 @@
         </div>
 
         <!-- Coding Section -->
-        <div class="subpage">
+        <div class="subpage" id="Coding">
             <div class="subp-text coding reveal">
                 <h4>Coding</h4>
             </div> <!--coding-text-->
@@ -184,7 +184,7 @@
         </div> <!-- coding -->
 
         <!-- Making Music Section -->
-        <div class="subpage">
+        <div class="subpage" id="Music">
 
             <div class="subp-text music reveal">
                 <h4>Making Music</h4>
@@ -263,7 +263,7 @@
         </div>
 
         <!-- Contact Me -->
-        <div class="subpage">
+        <div class="subpage contact" id="Contact">
             <div class="subp-text contact reveal">
                 <h4>Contact Me</h4>
             </div> <!--contact-text-->
@@ -304,6 +304,7 @@
 
                 </div> <!-- contact-subcontent-->
             </div> <!--contact-content-->
+            
         </div> <!--subpage-->
 
     </div> <!--container-->
