@@ -60,11 +60,12 @@ nav {
     clip-path: circle(24px at 32px 24px);
     -webkit-transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
     transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
-    position: absolute;
-    top: 10px;
+    position: fixed;
+    top: 30px;
     left: 50px;
     font-family: "Lato", Helvetica, monospace;  
     font-size: 20px;
+    z-index: 1000;
 }
 
 nav:hover {
