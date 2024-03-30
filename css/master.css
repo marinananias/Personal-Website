@@ -1,52 +1,33 @@
 /* Personal Website
 ● AUTHOR: Marina Amorim Ananias
-● DATE: July, 2023
+● DATE: March, 2024
 ● ACKNOWLEDGEMENTS/CODE INSPIRATION: 
     Loading sound wave: https://codepen.io/yomateo/pen/ypbNrJ
-    Carousel: https://codepen.io/dcode-software/pen/BaRMvJo
-    Scrow down arrow: https://codepen.io/matthewhirsch/pen/qOxmoz
-    Scrow down reveal animation: https://codepen.io/alvarotrigo/pen/PoKamZy */
+    Carousel: https://flickity.metafizzy.co/
+    Carousel Customization: https://codepen.io/desandro/pen/XJYPrm
+    Scrow down reveal animation: https://codepen.io/alvarotrigo/pen/PoKamZy 
+    Some colored icons: https://icons8.com/icon/40670/c-programming
+    Navigation Bar Big Screens: https://codepen.io/sorinbotirla/pen/QyoYgx */
 
-/* +-------------------+----------------------------------------------
-// | Making Responsive |
-// +-------------------+ */
 
-/*
-Extra small devices (phones, 600px and down)
-@media only screen and (max-width: 600px) {...}
-
-Small devices (portrait tablets and large phones, 600px and up)
-@media only screen and (min-width: 600px) {...}
-
-Medium devices (landscape tablets, 768px and up)
-@media only screen and (min-width: 768px) {...}
-
-Large devices (laptops/desktops, 992px and up)
-@media only screen and (min-width: 992px) {...}
-
-Extra large devices (large laptops and desktops, 1200px and up) 
-@media only screen and (min-width: 1200px) {...}
-
-@media only screen and (orientation: landscape) {...}
-*/
-
+/* 1300px width */
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Lato", Helvetica, monospace;
-    text-decoration: none;
 }
 
+/* Base font size */
+html {
+    font-size: 16px;
+}
+
+/* Global styles */
 body {
-    width: 100%;
-    height: auto;
-    word-spacing: 5px;
+    font-family: "Lato", Helvetica, sans-serif;
     background-color: #fff7f4;
-}
-
-.container {
-    position: relative;
+    color: #332e2e;
 }
 
 /* +--------+---------------------------------------------------------
@@ -54,17 +35,17 @@ body {
 // +--------+ */
 
 nav {
-    width: 300px;
+    width: 18.75rem; /* Converted from 300px */
     background: #ff055873;
-    -webkit-clip-path: circle(24px at 30px 24px);
-    clip-path: circle(24px at 32px 24px);
+    -webkit-clip-path: circle(1.5rem at 1.875rem 1.5rem); /* Converted from 24px at 30px 24px */
+    clip-path: circle(1.5rem at 2rem 1.5rem); /* Converted from 24px at 32px 24px */
     -webkit-transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
     transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
     position: fixed;
-    top: 30px;
-    left: 50px;
+    top: 1.875rem; /* Converted from 30px */
+    left: 3.125rem; /* Converted from 50px */
     font-family: "Lato", Helvetica, monospace;  
-    font-size: 20px;
+    font-size: 1.25rem; /* Converted from 20px */
     z-index: 1000;
 }
 
@@ -74,8 +55,8 @@ nav:hover {
     transition-timing-function: ease-out;
     -webkit-transition-duration: 0.75s;
     transition-duration: 0.75s;
-    -webkit-clip-path: circle(390px at 225px 24px);
-    clip-path: circle(390px at 150px 24px);
+    -webkit-clip-path: circle(24.375rem at 14.0625rem 1.5rem); /* Converted from 390px at 225px 24px */
+    clip-path: circle(24.375rem at 9.375rem 1.5rem); /* Converted from 390px at 150px 24px */
 }
 
 li {
@@ -84,8 +65,8 @@ li {
 
 #nav {
     display: block;
-    line-height: 50px;
-    padding: 0 20px;
+    line-height: 3.125rem; /* Converted from 50px */
+    padding: 0 1.25rem; /* Converted from 0 20px */
     color: inherit;
     cursor: pointer;
     -webkit-user-select: none;
@@ -100,17 +81,17 @@ li {
 #nav:active { background: #0097BC; }
 
 .navicon {
-    padding: 23px 22px;
+    padding: 1.4375rem 1.375rem; /* Converted from 23px 22px */
     cursor: pointer;
-    -webkit-transform-origin: 32px 24px;
-    -ms-transform-origin: 32px 24px;
-    transform-origin: 32px 24px;
+    -webkit-transform-origin: 2rem 1.5rem; /* Converted from 32px 24px */
+    -ms-transform-origin: 2rem 1.5rem; /* Converted from 32px 24px */
+    transform-origin: 2rem 1.5rem; /* Converted from 32px 24px */
 }
 
 .navicon div {
     position: relative;
-    width: 20px;
-    height: 2px;
+    width: 1.25rem; /* Converted from 20px */
+    height: 0.125rem; /* Converted from 2px */
     background: #fff7f4;
 }
 
@@ -118,15 +99,15 @@ li {
 .navicon div:after {
     display: block;
     content: "";
-    width: 20px;
-    height: 2px;
+    width: 1.25rem; /* Converted from 20px */
+    height: 0.125rem; /* Converted from 2px */
     background: #fff7f4;
     position: absolute;
 }
 
-.navicon div:before { top: -7px; }
+.navicon div:before { top: -0.4375rem; /* Converted from -7px */ }
 
-.navicon div:after { top: 7px; }
+.navicon div:after { top: 0.4375rem; /* Converted from 7px */ }
   
 /* +---------+--------------------------------------------------------
 // | Landing |
@@ -136,16 +117,14 @@ li {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin: 2.5% 0;
-    padding: 0 15%;
 }
 
 .sound-waves {
-    height: 70px;
+    height: 4.375rem; /* Converted from 70px */
     display: flex;
     justify-content: center;
     position: relative;
-    margin-bottom: 150px;
+    margin-bottom: 9.375rem; /* Converted from 150px */
 }
 
 .sound-waves .bar {
@@ -153,9 +132,9 @@ li {
     position: relative;
     background-color: #ff0558;
     height: 100%;
-    width: 10px;
-    border-radius: 50px;
-    margin: 0 5px;
+    width: 0.625rem; /* Converted from 10px */
+    border-radius: 3.125rem; /* Converted from 50px */
+    margin: 0 0.3125rem; /* Converted from 0 5px */
     animation: waves 1.2s linear infinite;
 }
 
@@ -221,6 +200,14 @@ li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    max-width: 100%;
+}
+
+/* Photo */
+.profile {
+    max-height: 27rem;
+    border-radius: 10px;
+    margin: 1% 0 7% 0;
 }
 
 /* Text + Button*/
@@ -228,8 +215,10 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    flex-wrap: wrap;
     align-items: center;
-    margin: 1% 0 0 4%;
+    margin: 3% 0 0 4%;
+    max-width: 100%;
 }
 
 /* Text */
@@ -241,6 +230,7 @@ li {
     width: auto;
     border-radius: 5%;
     margin: 0 0 10% 4%; /* trbl*/
+    max-width: 100%;
 }
 
 a {
@@ -257,22 +247,23 @@ a {
 }
 
 .about-me-button {
+    display: flex;
+    justify-content: center;
+    padding: 1.5% 7%;
+    width: 95%;
     background: linear-gradient(to bottom right, #553ed6, #553ed6c5);
     border: 0;
     border-radius: 10px;
     line-height: 150%;
     color: #FFFFFF;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
     outline: transparent;
     transition: box-shadow .2s ease-in-out;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     white-space: nowrap;
-    padding: 1.5% 7%;
-    width: 95%;
+    font-size: 1.25rem;
 }
 
 .about-me-button:not([disabled]):focus {
@@ -282,7 +273,6 @@ a {
 .about-me-button:not([disabled]):hover {
     box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem #ff05588f, .125rem .125rem 1rem #ff05588f;
 }
-
 
 /* +-------------------------+----------------------------------------
 // | Coding AND Making Music |
@@ -304,6 +294,27 @@ a {
     width: 100%;
     height: auto;
 }
+
+#img-car-coding {
+    height: 12rem;
+    max-width: 100%;
+}
+
+#git-icon-car {
+    color: #fef7f3; 
+    margin: 0 1.25rem;
+}
+
+#img-car-music1 {
+    height: 13.75rem;
+    max-width: 100%;
+}
+
+#img-car-music2 {
+    height: 8.75rem;
+    max-width: 100%;
+}
+
 /* +--------+---------------------------------------------------------
 // | Skills |
 // +--------+ */
@@ -312,13 +323,25 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     color: #ff0558;
 }
 
 .skills_icons--text {
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    padding: 15px 30px;
+    padding: 0.9375rem 1.875rem; /* 15px 30px*/
+}
+
+.skills_icons--text img {
+    width: 3.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.skills_icons--text i {
+    margin-bottom: 0.7rem;
 }
 
 /* +----------+-------------------------------------------------------
@@ -337,11 +360,11 @@ a {
 
 .gallery-cell {
     width: 66%;
-    height: 250px;
+    height: 15.625rem; /* 250px */
     background: white;
     align-items: center;
-    margin-right: 10px;
-    padding: 3% 5% 0 3%;
+    margin-right: 0.625rem; /* 10px */
+    padding: 3% 3% 0 3%;
 }
 
 .gallery-cell.coding {
@@ -365,15 +388,29 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
     margin: 0 0 0 5%; /* trbl */
 }
 
+.git-car {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.7rem;
+}
+
+.git-car i {
+    font-size: 2.5vw;
+}
+
 .flickity-prev-next-button {
-    width: 100px;
-    height: 100px;
+    width: 6.25rem; /* 100px */
+    height: 6.25rem; /* 100px */
     background: transparent;
   }
+
   /* arrow color */
   .g-coding .flickity-prev-next-button .arrow {
     fill: #0096bc69;
@@ -387,6 +424,7 @@ a {
   .flickity-prev-next-button:hover {
     background: transparent;
   }
+
   /* hide disabled button */
   .flickity-prev-next-button:disabled {
     display: none;
@@ -394,29 +432,40 @@ a {
   
   /* position dots in gallery */
   .flickity-page-dots {
-    bottom: 0px;
+    top: 17rem;
   }
+  
   /* white circles */
   .flickity-page-dots .dot {
-    width: 15px;
-    height: 15px;
+    width: 0.9375rem; /* 15px */
+    height: 0.9375rem; /* 15px */
     opacity: 1;
     background: transparent;
-    border: 2px solid white;
+    border: 0.125rem solid white; /* 2px */
   }
+
   .g-coding .flickity-page-dots .dot {
-    border: 2px solid #0096bc69;
+    border: 0.125rem solid #0096bc69; /* 2px */
+    width: 0.9375rem; /* 15px */
+    height: 0.9375rem; /* 15px */
   }
+
   .g-music .flickity-page-dots .dot {
-    border: 2px solid #BFD73E;
+    border: 0.125rem solid #BFD73E; /* 2px */
+    width: 0.9375rem; /* 15px */
+    height: 0.9375rem; /* 15px */
   }
 
   /* fill-in selected dot */
   .g-coding .flickity-page-dots .dot.is-selected {
     background: #0096bc69;
+    width: 0.9375rem; /* 15px */
+    height: 0.9375rem; /* 15px */
   }  
   .g-music .flickity-page-dots .dot.is-selected {
     background: #BFD73E;
+    width: 0.9375rem; /* 15px */
+    height: 0.9375rem; /* 15px */
   }  
 
 /* +------------+-----------------------------------------------------
@@ -424,18 +473,19 @@ a {
 // +------------+ */
 .subpage.contact {
     margin-bottom: 2%;
+    max-width: 100%;
 }
 
 .contact-content {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
 .signature-logo {
-    width: 45%;
+    max-width: 45%;
     opacity: 0.3;
     transform: rotate(-7deg);
     margin-right: 5%;
@@ -447,6 +497,7 @@ a {
     justify-content: center;
     text-align: center;
     align-items: center;
+    max-width: 100%;
 }
 
 .contact-mail {
@@ -455,6 +506,11 @@ a {
     justify-content: flex-start;
     align-items: center;
     margin-top: 10%;
+    max-width: 100%;
+}
+
+.contact-mail i {
+    margin-right: 0.7rem; 
 }
 
 .social-icons {
@@ -462,6 +518,7 @@ a {
     flex-direction: row;
     justify-content: center;
     margin-top: 10%;
+    max-width: 100%;
 }
 
 .social-icons--each {
@@ -485,53 +542,48 @@ footer {
 // +------+ */
 
 h1 {
-    font-size: 110px;
+    font-size: 6.875rem; /* Converted from 110px */
     color: #332e2e;
-    margin-top: 140px;
+    margin-top: 8.75rem; /* Converted from 140px */
 }
 
 h2 {
-    font-size: 60px;
+    font-size: 3.75rem; /* Converted from 60px */
     color: #332e2e;
-    padding: 40px 0 60px 0;
+    padding: 2.5rem 0 3.75rem 0; /* Converted from 40px 0 60px 0 */
 }
 
 h3 {
-    font-size: 30px;
+    font-size: 1.875rem; /* Converted from 30px */
     color: #332e2e;
 }
 
 h4 {
-    font-size: 50px;
+    font-size: 3.125rem; /* Converted from 50px */
     padding-bottom: 5%;
 }
 
 h5 {
-    font-size: 40px;
+    font-size: 2.5rem; /* Converted from 40px */
     color: #332e2e;
-    padding: 0 0 25px 0;
+    padding: 0 0 1.5625rem 0; /* Converted from 0 0 25px 0 */
 }
 
 h6 {
-    font-size: 28px;
+    font-size: 1.75rem; /* Converted from 28px */
     color: #fff7f4;
-    margin-bottom: 20%;
+    margin-bottom: 15%; 
 }
 
-p {
-    font-size: 20px;
-    color: #332e2e;
-}
-
-span {
-    font-size: 20px;
+p, span {
+    font-size: 1.25rem; /* Converted from 20px */
     color: #332e2e;
 }
 
 .subp-text {
     text-decoration-line: underline;
-    text-underline-offset: 12px;
-    text-decoration-thickness: 5px;
+    text-underline-offset: 0.75rem; /* Converted from 12px */
+    text-decoration-thickness: 0.3125rem; /* Converted from 5px */
     text-decoration-color: #ff0558;
 }
 
@@ -555,7 +607,7 @@ span {
 
 .copyright-text {
     color: #fff7f4;
-    font-size: 19px;
+    font-size: 1.1875rem; /* Converted from 19px */
 }
 
 /* +----------------+-------------------------------------------------
@@ -564,7 +616,7 @@ span {
 
 .reveal {
     position: relative;
-    transform: translateY(150px);
+    transform: translateY(9.375rem);
     opacity: 0;
     transition: 1s all ease;
 }
@@ -572,4 +624,144 @@ span {
 .reveal.active {
     transform: translateY(0);
     opacity: 1;
+}
+
+/* +-------------------+----------------------------------------------
+// | Making Responsive |
+// +-------------------+ */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    /* +--------+-------------------------
+    // | NavBar |
+    // +--------+ */
+    nav {
+        display: none;
+    }
+
+    /* +------+---------------------------
+    // | Text |
+    // +------+ */
+    /* Base font size */
+    html {
+        font-size: 8px;
+    }
+
+    h6 {
+        margin-bottom: 0%; 
+    }
+    /* +----------+-----------------------
+    // | About Me |
+    // +----------+ */    
+    /* Photo + (Text + Button) */
+    .about-me-content {
+        flex-direction: column;
+    }
+
+    /* Photo */
+    .profile {
+        max-height: 22rem;
+        max-width: 70%;
+        margin: 0;
+        align-self: left;
+    }
+
+    /* Text + Button*/
+    .box-button {
+        align-items: center;
+        margin: 3% 0 0 4%;
+        max-width: 100%;
+    }
+    
+    /* +----------+-----------------------
+    // | Carousel |
+    // +----------+ */
+    .cell-content {
+        flex-direction: column;
+    }
+
+    #img-car-coding {
+        margin-bottom: 0.5rem;
+    }
+
+    .flickity-prev-next-button {
+       display: none;
+    }
+
+    /* position dots in gallery */
+    .flickity-page-dots {
+        top: 38vw;
+    }
+        
+    /* +--------+-------------------------
+    // | Skills |
+    // +--------+ */
+    .skills {
+        margin-top: 2rem;
+    }
+    .skills_icons--text i {
+        font-size: 7vw;
+    }
+
+    /* +------------+---------------------
+    // | Contact Me |
+    // +------------+ */    
+    .contact-text{
+        margin-top: 1rem;
+    }
+
+    .contact-mail i {
+        font-size: 7vw;
+    }
+
+    .signature-logo {
+        position: fixed;
+    }
+
+    .social-icons--each i {
+        font-size: 7vw; /* Adjust the font size based on viewport width */
+    }
+    
+    /* +----------------+-----------------
+    // | Page Animation |
+    // +----------------+ */    
+    .reveal {
+        /* Override the properties inside the media query to disable the reveal effect */
+        transform: none;
+        opacity: 1; /* Set opacity to 1 to make the element always visible */
+        transition: none; /* Remove transition to prevent any animation */
+    }
+
+    .reveal.active {
+        /* Override the properties inside the media query to disable the reveal effect */
+        transform: none;
+        opacity: 1; /* Set opacity to 1 to make the element always visible */
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+
+/* Landscape */
+@media only screen and (orientation: landscape) {
+
 }

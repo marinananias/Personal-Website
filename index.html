@@ -3,7 +3,7 @@
 ● DATE: March, 2024
 ● ACKNOWLEDGEMENTS/CODE INSPIRATION: 
     Loading sound wave: https://codepen.io/yomateo/pen/ypbNrJ
-    Carousel:
+    Carousel: https://flickity.metafizzy.co/
     Carousel Customization: https://codepen.io/desandro/pen/XJYPrm
     Scrow down reveal animation: https://codepen.io/alvarotrigo/pen/PoKamZy 
     Some colored icons: https://icons8.com/icon/40670/c-programming
@@ -87,7 +87,7 @@
                 <h4>About Me</h4>
             </div>
             <div class="about-me-content reveal">
-                <img src="images/p2.png" alt="Profile Picture" style="width: 37%; border-radius: 10px; margin: 1% 0 7% 0;">
+                <img src="images/p2.png" alt="Profile Picture" class="profile">
                 <div class="box-button">
                     <div class="about-me-box">
                         <span>Originally from Maceió, Brazil, I'm currently pursuing a Bachelor's degree in <span style="color: #ff0558;">Computer Science and Music with a minor in Neuroscience</span> at Grinnell College, Iowa. I'm fascinated by the intersection of these fields and passionate about exploring interdisciplinary projects that leverage the connections between them.</span><br>
@@ -112,36 +112,51 @@
 
                     <div class="gallery-cell coding">
                         <div class="cell-content">
-                            <img src="images/MIDI Songwriter (coding).JPG" alt="MIDI Songwriter" style="display: flex; height: 100%;">
+                            <img src="images/MIDI Songwriter (coding).JPG" alt="MIDI Songwriter" id="img-car-coding">
                             <div class="cell-container">
                                 <h6>MIDI Songwriter</h6>
-                                <a href="https://github.com/marinananias/MIDI-Songwriter-Prototype" title="github" target="_blank" style="color: #fef7f3; margin: 0 20px;" role="button">
-                                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
-                                </a>				
+                                <div class="git-car">
+                                    <a href="https://github.com/marinananias/MIDI-Songwriter-Prototype" title="github" target="_blank" id="git-icon-car" role="button" style="margin: 0 0.5rem 0 0;">
+                                        <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="https://github.com/marinananias/MIDI-Songwriter-Prototype" title="github" style="text-decoration: underline; color: #ffffff;">
+                                        <p style="color: #ffffff; font-size: 0.70rem;">Explore the Details</p>
+                                    </a>                                
+                                </div>			
                             </div> <!--cell-container-->
                         </div> <!--cell-content-->
                     </div> <!--gallery-cell-->
                   
                     <div class="gallery-cell coding">
                         <div class="cell-content">
-                            <img src="images/MIDIKeyboard 151 (coding).png" alt="MIDI Keyboard" style="display: flex; height: 100%;">
+                            <img src="images/MIDIKeyboard 151 (coding).png" alt="MIDI Keyboard" id="img-car-coding">
                             <div class="cell-container">
                                 <h6>MIDI Keyboard</h6>
-                                <a href="https://github.com/marinananias/MIDI-Keyboard" title="github" target="_blank" style="color: #fef7f3; margin: 0 20px;" role="button">
-                                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
-                                </a>	
+                                <div class="git-car">
+                                    <a href="https://github.com/marinananias/MIDI-Keyboard" title="github" target="_blank" id="git-icon-car" role="button" style="margin: 0 0.5rem 0 0;">
+                                        <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                                    </a>	
+                                    <a href="https://github.com/marinananias/MIDI-Keyboard" title="github" style="text-decoration: underline; color: #ffffff;">
+                                        <p style="color: #ffffff; font-size: 0.70rem;">Explore the Details</p>
+                                    </a>                                
+                                </div>	
                             </div> <!--cell-container-->
                         </div> <!--cell-content-->
                     </div> <!--gallery-cell-->
 
                     <div class="gallery-cell coding">
                         <div class="cell-content">
-                            <img src="images/This Website!.png" alt="This Website!" style="display: flex; height: 100%;">
+                            <img src="images/This Website!.png" alt="This Website!" id="img-car-coding">
                             <div class="cell-container">
                                 <h6>This Website!</h6>
-                                <a href="https://github.com/marinananias/Website" title="github" target="_blank" style="color: #fef7f3; margin: 0 20px;" role="button">
-                                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
-                                </a>	
+                                <div class="git-car">
+                                    <a href="https://github.com/marinananias/Website" title="github" target="_blank" id="git-icon-car" role="button" style="margin: 0 0.5rem 0 0;">
+                                        <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="https://github.com/marinananias/Website" title="github" style="text-decoration: underline; color: #ffffff;">
+                                        <p style="color: #ffffff; font-size: 0.70rem;">Explore the Details</p>
+                                    </a>                                
+                                </div>		
                             </div> <!--cell-container-->
                         </div> <!--cell-content-->
                     </div> <!--gallery-cell-->
@@ -197,7 +212,7 @@
 
                     <div class="gallery-cell music">
                         <div class="cell-content">
-                            <a target="_blank" href="https://drive.google.com/file/d/1k5nBmczmfO2bPBII5CZnReM9Mlr_tC0P/view?usp=sharing"><img src="images/broken-smile.png" alt="Broken Smile" style="max-height: 220px;"></a>
+                            <a target="_blank" href="https://drive.google.com/file/d/1k5nBmczmfO2bPBII5CZnReM9Mlr_tC0P/view?usp=sharing"><img src="images/broken-smile.png" alt="Broken Smile" id="img-car-music1"></a>
                             <div class="cell-container">
                                 <h6><i>Broken Smile</i></h6>
                                 <audio controls>
@@ -210,7 +225,7 @@
 
                     <div class="gallery-cell music">
                         <div class="cell-content">
-                            <a target="_blank" href="https://drive.google.com/file/d/1OycnjHYkNaXXYicyRPM-A519TVFt1bRA/view?usp=sharing"><img src="images/expectations.png" alt="Expectations" style="max-height: 220px;"></a>
+                            <a target="_blank" href="https://drive.google.com/file/d/1OycnjHYkNaXXYicyRPM-A519TVFt1bRA/view?usp=sharing"><img src="images/expectations.png" alt="Expectations" id="img-car-music1"></a>
                             <div class="cell-container">
                                 <h6><i>Expectations</i></h6>
                                 <audio controls>
@@ -223,7 +238,7 @@
 
                     <div class="gallery-cell music">
                         <div class="cell-content">
-                            <img src="images/luz.png" alt="Luz" style="max-height: 140px;">
+                            <img src="images/luz.png" alt="Luz" id="img-car-music2">
                             <div class="cell-container">
                                 <h6><i>Luz</i></h6>
                                 <audio controls>
@@ -273,10 +288,10 @@
                 
                 <!-- Content positioned on top of the image -->
                 <div class="contact-subcontent">
-                    <p>Every great collaboration starts with a simple hello. Let's create something amazing!</p>
+                    <p class="contact-text">Every great collaboration starts with a simple hello. Let's create something amazing!</p>
 
                     <div class="contact-mail">
-                        <a href="mailto:ananias.marina@gmail.com" title="email" target="_blank" role="button" style="margin-right: 4%;">
+                        <a href="mailto:ananias.marina@gmail.com" title="email" target="_blank" role="button">
                             <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
                         </a>
                         <a href="mailto:ananias.marina@gmail.com" title="email" style="text-decoration: underline; color: #332e2e;">
