@@ -382,6 +382,8 @@ a {
     align-items: center;
     height: 90%;
     width: auto;
+    max-width: 100%; /* Ensure images don't exceed their container's width */
+    max-height: 100%; /* Adjust height as needed */
 }
 
 .cell-container {
