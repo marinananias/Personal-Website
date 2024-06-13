@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family:
+    'Lato',
+    Helvetica Neue,
+    sans-serif;
+  line-height: 0;
+  font-size: 9px;
+  background-color: #fff7f4;
+  color: #332e2e;
+
+  /* Extra small devices (phones, less than 600px) */
+  /* No media query since this is the default */
+
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: 600px) { 
+    font-size: 12px;
+  }
+
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: 900px) {
+    font-size: 14px;
+  }
+
+  /* Large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    font-size: 16px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.3;
+}
