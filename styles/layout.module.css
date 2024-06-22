@@ -6,8 +6,9 @@
   margin: 0rem 4rem;
 }
 
-.container > * {
-  min-height: 100vh;
+.header {
+  margin: 0;
+  padding: 0;
 }
 
 .ft {

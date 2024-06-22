@@ -1,9 +1,10 @@
 .titCoding {
-    color: #0097BC;
+  color: #fff7f4;
 }
 
 .codeContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #039490;
 }
