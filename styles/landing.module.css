@@ -9,6 +9,17 @@
   color: #ec297b;
 }
 
+.logoContainer {
+  height: 5rem;
+  width: 100vw;
+  padding-left: 5rem;
+}
+
+.logo {
+  height: 80%;
+  width: auto;
+}
+
 /* Text Block */
 .greetings {
   display: flex;
@@ -52,23 +63,33 @@
   height: 100%;
 }
 
-.vinyl {
+.vinyl,
+.vinylNeedle {
   position: absolute;
-  width: 57%;
-  height: 57%;
   top: 50%;
   left: 50%;
+}
+.vinyl {
+  width: 57%;
+  height: 57%;
   /* "center" an absolutely positioned element 
   both vertically and horizontally within its 
   parent container.  */
   transform: translate(-53%, -50%);
+  animation: rotation 5s linear infinite;
 }
 
 .vinylNeedle {
-  position: absolute;
   width: 40%;
   height: 50%;
-  top: 50%;
-  left: 50%;
   transform: translate(-10%, -60%);
+}
+
+@keyframes rotation {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
