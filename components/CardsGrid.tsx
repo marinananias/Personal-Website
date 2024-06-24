@@ -1,20 +1,17 @@
-import * as React from 'react';
-import Grid from '@mui/material/Grid';
-import MediaCard from './Cards';
+import React from "react";
+import Grid from "@mui/material/Grid";
 
-export default function CardsGrid({n}, ) {
-  const cards = Array.from({ length: n }); 
-
+export default function ResGrid({ children }) {
   return (
-    <Grid 
-    container 
-    spacing={2}      
-    justifyContent="left"
-    alignItems="center"
+    <Grid
+      container
+      spacing={{ xs: 3, sm: 7, md: 5, lg: 10 }}
+      justifyContent="center"
+      alignItems="center"
     >
-      {cards.map((card, index) => (
-        <Grid item xs={6} sm={4} md={4} lg={4} key={index}>
-          <MediaCard />
+      {React.Children.map(children, (child, index) => (
+        <Grid item xs={10} sm={7} md={7} lg={5} key={index}>
+          {child}
         </Grid>
       ))}
     </Grid>
