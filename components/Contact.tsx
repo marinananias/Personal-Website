@@ -9,20 +9,11 @@ export default function Contact() {
       id="contact"
       className={`${utils.subContainers} ${styles.subContainer}`}
     >
-      <h2 className={`${utils.tit} ${styles.titContact}`}>Contact Me</h2>
-      <Image
-        src="/images/logo.png"
-        sizes="100vw"
-        style={{
-          width: "35%",
-          height: "auto",
-          marginTop: -10,
-          opacity: 0.4,
-        }}
-        width={500}
-        height={300}
-        alt="Logo"
-      />
+      <div className={styles.titleBox}>
+        <h2 className={styles.title1}>LET'S</h2>
+        <h2 className={styles.title2}>CONTACT ME</h2>
+        <h2 className={styles.title3}>JAM!</h2>
+      </div>
     </section>
   );
 }
