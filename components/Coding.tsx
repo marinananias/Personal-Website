@@ -9,11 +9,8 @@ export default function Coding() {
       id="coding"
       className={`${utils.subContainers} ${styles.subContainer}`}
     >
-      <h2 className={`${utils.tit} ${styles.titCoding}`}>Coding</h2>
-      <div className={styles.codeContent}>
-        <CardsGrid n={1} />
-        {/* projects + skils */}
-      </div>
+      <h2 className={styles.title}>CODING</h2>
+      {/* <CardsGrid></CardsGrid> */}
     </section>
   );
 }

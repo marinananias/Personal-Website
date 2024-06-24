@@ -2,8 +2,11 @@
   background-color: #039490;
 }
 
-.titCoding {
+.title {
+  font-size: 7rem;
   color: #fff7f4;
+  margin-top: 7rem;
+  margin-bottom: 5rem;
 }
 
 .codeContent {
