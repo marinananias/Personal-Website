@@ -1,8 +1,8 @@
 import React from "react";
-import CardsGrid from "./CardsGrid";
+import CardsGrid from "./utils/CardsGrid";
 import styles from "../styles/music.module.css";
 import utils from "../styles/utils.module.css";
-import Cards from "./Cards";
+import Cards from "./utils/Cards";
 
 export default function Music() {
   return (

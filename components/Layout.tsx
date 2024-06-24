@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/layout.module.css";
-import NavBar from "./NavBar";
+import NavBar from "./utils/NavBar";
 
 export const name = "Marina Ananias";
 

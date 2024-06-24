@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "../styles/coding.module.css";
 import utils from "../styles/utils.module.css";
-import Cards from "./Cards";
-import CardsGrid from "./CardsGrid";
+import Cards from "./utils/Cards";
+import CardsGrid from "./utils/CardsGrid";
 
 export default function Coding() {
   return (
