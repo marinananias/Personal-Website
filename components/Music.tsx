@@ -9,10 +9,9 @@ export default function Music() {
       id="music"
       className={`${utils.subContainers} ${styles.subContainer}`}
     >
-      <h2 className={`${utils.tit} ${styles.titMusic}`}>Making Music</h2>
-      <div className={styles.musicContent}>
-        <CardsGrid n={1} />
-        {/* projects + skils */}
+      <div className={styles.titleBox}>
+        <h2 className={styles.title1}>Making</h2>
+        <h2 className={styles.title2}>MUSIC</h2>
       </div>
     </section>
   );
