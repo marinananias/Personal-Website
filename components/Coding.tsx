@@ -1,7 +1,8 @@
 import React from "react";
-import CardsGrid from "./CardsGrid";
 import styles from "../styles/coding.module.css";
 import utils from "../styles/utils.module.css";
+import Cards from "./Cards";
+import CardsGrid from "./CardsGrid";
 
 export default function Coding() {
   return (
@@ -26,7 +27,28 @@ export default function Coding() {
           <p>HTML</p>
         </div>
       </div>
-      {/* <CardsGrid></CardsGrid> */}
+      <div className={styles.projects}>
+        <CardsGrid>
+          <Cards
+            title="MIDI Songwriter"
+            image="/images/MIDISong.jpg"
+            link="https://github.com/marinananias/MIDI-Songwriter-Prototype"
+            section="coding"
+          />
+          <Cards
+            title="MIDI Keyboard"
+            image="/images/MIDIKey.png"
+            link="https://github.com/marinananias/MIDI-Keyboard"
+            section="coding"
+          />
+          <Cards
+            title="This Website"
+            image="https://example.com"
+            link="https://example.com"
+            section="coding"
+          />
+        </CardsGrid>
+      </div>
     </section>
   );
 }
