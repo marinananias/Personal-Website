@@ -1,5 +1,6 @@
 .subContainer {
   background-color: #332e2e;
+  padding-bottom: 5rem;
 }
 
 .titleBox {
@@ -27,4 +28,14 @@
   color: #fff7f4;
   font-size: 6.3rem;
   margin-top: 1.5rem;
+}
+
+.discoContainer {
+  height: 20rem;
+  width: auto;
+  padding-left: 2rem;
+}
+.disco {
+  height: 100%;
+  width: auto;
 }
