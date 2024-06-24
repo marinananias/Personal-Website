@@ -2,6 +2,9 @@ import React from "react";
 import Image from "next/image";
 import styles from "../styles/contact.module.css";
 import utils from "../styles/utils.module.css";
+import LinkedIn from "./icons/LinkedIn";
+import GitHub from "./icons/GitHub";
+import SoundCloud from "./icons/SoundCloud";
 
 export default function Contact() {
   return (
@@ -22,6 +25,25 @@ export default function Contact() {
           height={150}
           className={styles.disco}
         />
+      </div>
+      <div className={styles.socBox}>
+        <div className={styles.socIcons}>
+          <a href="https://www.linkedin.com/in/marinaananias/" role="button">
+            <LinkedIn fill={"#FFF7F4"} />
+          </a>
+          <a href="https://github.com/marinananias" role="button">
+            <GitHub fill={"#FFF7F4"} />
+          </a>
+          <a
+            href="https://soundcloud.com/marina-ananias-806391428?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+            role="button"
+          >
+            <SoundCloud fill={"#FFF7F4"} />
+          </a>
+        </div>
+        <a href="mailto:ananias.marina@gmail.com" title="email">
+          <p>ananias.marina@gmail.com</p>
+        </a>
       </div>
     </section>
   );
