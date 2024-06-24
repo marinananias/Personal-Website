@@ -2,6 +2,29 @@
   background-color: #332e2e;
 }
 
-.titContact {
+.titleBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+}
+
+.title1 {
   color: #fff7f4;
+  font-size: 6rem;
+  margin-top: 6rem;
+  margin-bottom: 1.7rem;
+}
+
+.title2 {
+  color: rgb(255, 247, 244, 0.5);
+  font-size: 4rem;
+}
+
+.title3 {
+  color: #fff7f4;
+  font-size: 6.3rem;
+  margin-top: 1.5rem;
 }
