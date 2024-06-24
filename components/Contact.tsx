@@ -14,6 +14,15 @@ export default function Contact() {
         <h2 className={styles.title2}>CONTACT ME</h2>
         <h2 className={styles.title3}>JAM!</h2>
       </div>
+      <div className={styles.discoContainer}>
+        <Image
+          src="/images/disco.png"
+          alt="Disco Globe"
+          width={160}
+          height={150}
+          className={styles.disco}
+        />
+      </div>
     </section>
   );
 }
