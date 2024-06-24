@@ -1,11 +1,14 @@
-import React from 'react';
-import CardsGrid from './CardsGrid';
-import styles from '../styles/coding.module.css';
-import utils from '../styles/utils.module.css';
+import React from "react";
+import CardsGrid from "./CardsGrid";
+import styles from "../styles/coding.module.css";
+import utils from "../styles/utils.module.css";
 
-export default function Coding () {
+export default function Coding() {
   return (
-    <section id="coding" className={utils.subContainers}>
+    <section
+      id="coding"
+      className={`${utils.subContainers} ${styles.subContainer}`}
+    >
       <h2 className={`${utils.tit} ${styles.titCoding}`}>Coding</h2>
       <div className={styles.codeContent}>
         <CardsGrid n={1} />
@@ -13,4 +16,4 @@ export default function Coding () {
       </div>
     </section>
   );
-};
+}
