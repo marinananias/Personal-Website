@@ -9,8 +9,26 @@
   margin-bottom: 5rem;
 }
 
-.codeContent {
+.skills {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.skills * {
+  color: #fff7f4;
+  margin: 0.3rem;
+}
+
+.skillsCol {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
+  justify-content: center;
+  margin: 2rem;
 }
