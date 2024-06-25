@@ -25,6 +25,7 @@ export default function Landing() {
           alt="Record Player Base"
           width={300}
           height={300}
+          priority={true}
           className={styles.vinylBase}
         />
         <Image
