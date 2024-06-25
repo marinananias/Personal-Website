@@ -7,7 +7,7 @@ import CardsGrid from "./utils/CardsGrid";
 const reqUrl =
   "http://localhost/site/index.php/wp-json/wp/v2/projects?acf_format=standard&_fields=id,title,acf";
 
-export default function Coding() {
+export default function Coding({ id }) {
   const [codingProjects, setCodingProjects] = React.useState([]);
 
   React.useEffect(() => {
@@ -33,7 +33,7 @@ export default function Coding() {
 
   return (
     <section
-      id="coding"
+      id={id}
       className={`${utils.subContainers} ${styles.subContainer}`}
     >
       <h2 className={styles.title}>CODING</h2>

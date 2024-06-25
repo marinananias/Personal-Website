@@ -7,7 +7,7 @@ import Cards from "./utils/Cards";
 const reqUrl =
   "http://localhost/site/index.php/wp-json/wp/v2/projects?acf_format=standard&_fields=id,title,acf";
 
-export default function Music() {
+export default function Music({ id }) {
   const [musicProjects, setMusicProjects] = React.useState([]);
 
   React.useEffect(() => {
@@ -32,7 +32,7 @@ export default function Music() {
   }, []);
   return (
     <section
-      id="music"
+      id={id}
       className={`${utils.subContainers} ${styles.subContainer}`}
     >
       <div className={styles.titleBox}>

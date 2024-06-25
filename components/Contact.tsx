@@ -6,10 +6,10 @@ import LinkedIn from "./icons/LinkedIn";
 import GitHub from "./icons/GitHub";
 import SoundCloud from "./icons/SoundCloud";
 
-export default function Contact() {
+export default function Contact({ id }) {
   return (
     <section
-      id="contact"
+      id={id}
       className={`${utils.subContainers} ${styles.subContainer}`}
     >
       <div className={styles.titleBox}>
