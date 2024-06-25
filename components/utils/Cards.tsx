@@ -23,11 +23,11 @@ const StyledCard = styled(Card)(() => ({
 //   }
 // }));
 
-interface CardContProps {
+interface Props {
   section: string;
 }
 
-const CardCont = styled(CardContent)<CardContProps>(({ section }) => ({
+const CardCont = styled(CardContent)<Props>(({ section }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -41,35 +41,29 @@ const CardCont = styled(CardContent)<CardContProps>(({ section }) => ({
 //   maxHeight:"50%"
 // }));
 
-interface TypographyTitleProps {
-  section: string;
-}
-
-const TypographyTitle = styled(Typography)<TypographyTitleProps>(
-  ({ section }) => ({
-    fontFamily: "Lato",
-    color: section === "coding" ? "#039490" : "#EAE8EB",
-    fontSize: "2rem",
-    fontWeight: "400",
-    paddingLeft: "0.7273rem",
-    marginBottom: "1rem",
-    marginTop: "0.5rem",
-  })
-);
-
-const Links = styled(Typography)(() => ({
-  display: "flex",
-  flexDirection: "row",
-  justifyContent: "left",
-  alignItems: "center",
-  textAlign: "left",
+const TypographyTitle = styled(Typography)<Props>(({ section }) => ({
   fontFamily: "Lato",
-  color: "#332e2e",
-  fontSize: "1.2rem",
-  fontWeight: "300",
+  color: section === "coding" ? "#039490" : "#EAE8EB",
+  fontSize: "2rem",
+  fontWeight: "400",
+  paddingLeft: "0.7273rem",
+  marginBottom: "1rem",
+  marginTop: "0.5rem",
 }));
 
-export default function Cards({ title, image, link, section }) {
+const Links = styled(Typography)<Props>(({ section }) => ({
+  display: "flex",
+  textAlign: "left",
+  fontFamily: "Lato",
+  fontSize: "1.2rem",
+  fontWeight: "400",
+  justifyContent: "left",
+  flexDirection: section === "coding" ? "row" : "column",
+  alignItems: section === "coding" ? "center" : "left",
+  color: section === "coding" ? "#332e2e" : "#fff7f4",
+}));
+
+export default function Cards({ title, image, link, section, audio }) {
   const theme = createTheme({});
   // const matchesXsOnly = useMediaQuery(theme.breakpoints.only('xs'));
   // const matchesLgOnly = useMediaQuery(theme.breakpoints.only('lg'));
@@ -86,8 +80,8 @@ export default function Cards({ title, image, link, section }) {
         <TypographyTitle section={section} variant="h2">
           {title}
         </TypographyTitle>
-        {section === "coding" ? (
-          <Links>
+        <Links section={section}>
+          {section === "coding" ? (
             <IconButton
               aria-label="github"
               href={link}
@@ -97,18 +91,23 @@ export default function Cards({ title, image, link, section }) {
             >
               <GitHubIcon />
             </IconButton>
-            <a href={link} style={{ color: "#3C3C3C", textDecoration: "none" }}>
-              Learn More
-            </a>
-          </Links>
-        ) : (
-          <Links>
+          ) : (
             <audio controls>
-              <source src={link} type="audio/mpeg" />
+              <source src={audio} type="audio/mpeg" />
               Your browser does not support the audio element.
             </audio>
-          </Links>
-        )}
+          )}
+          <a
+            href={link}
+            style={{
+              color: section === "coding" ? "#332e2e" : "#fff7f4",
+              textDecoration: "underline",
+              padding: section === "coding" ? "0" : "1rem 0 0 1rem",
+            }}
+          >
+            Learn More
+          </a>
+        </Links>
       </CardCont>
       {/* <CardActionArea>
       </CardActionArea> */}
