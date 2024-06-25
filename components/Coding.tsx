@@ -67,24 +67,6 @@ export default function Coding() {
               />
             );
           })}
-          {/* <Cards
-            title="MIDI Songwriter"
-            image="/images/MIDISong.jpg"
-            link="https://github.com/marinananias/MIDI-Songwriter-Prototype"
-            section="coding"
-          />
-          <Cards
-            title="MIDI Keyboard"
-            image="/images/MIDIKey.png"
-            link="https://github.com/marinananias/MIDI-Keyboard"
-            section="coding"
-          />
-          <Cards
-            title="This Website"
-            image="https://example.com"
-            link="https://example.com"
-            section="coding"
-          /> */}
         </CardsGrid>
       </div>
     </section>
