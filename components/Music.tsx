@@ -13,23 +13,27 @@ export default function Music({ id }) {
   React.useEffect(() => {
     const fetchData = async () => {
       try {
-        const req = await fetch(reqUrl);
-        if (!req.ok) {
+        const response = await fetch(`/api/fetchProjects?`);
+
+        if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
-        const allProjects = await req.json();
-        const musicProjectsData = allProjects.filter(
+
+        const projects = await response.json();
+
+        const musicProjectsData = projects.filter(
           (project) => project.acf.section.name === "music"
         );
+
         setMusicProjects(musicProjectsData);
       } catch (error) {
         console.error("Error fetching data: ", error);
-        // res.status(500).json({ error: 'Failed to fetch data' });
       }
     };
 
     fetchData();
   }, []);
+
   return (
     <section
       id={id}
