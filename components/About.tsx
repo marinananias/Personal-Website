@@ -3,10 +3,10 @@ import Image from "next/image";
 import styles from "../styles/about.module.css";
 import utils from "../styles/utils.module.css";
 
-export default function About() {
+export default function About({ id }) {
   return (
     <section
-      id="about"
+      id={id}
       className={`${utils.subContainers} ${styles.subContainer}`}
     >
       <div className={styles.txt}>
