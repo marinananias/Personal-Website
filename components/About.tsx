@@ -4,6 +4,11 @@ import styles from "../styles/about.module.css";
 import utils from "../styles/utils.module.css";
 
 export default function About({ id }) {
+  const handleOpenResume = () => {
+    const url = "/api/AnaniasMarinaResume";
+    window.open(url, "_blank");
+  };
+
   return (
     <section
       id={id}
@@ -39,7 +44,7 @@ export default function About({ id }) {
           shrines in Zelda.
         </p>
       </div>
-      <div className={styles.button} role="button">
+      <div className={styles.button} onClick={handleOpenResume} role="button">
         Resume
       </div>
       <div className={styles.titlePhoto}>
