@@ -11,7 +11,7 @@
   padding: 0;
 }
 
-.ft {
+.footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,7 +20,7 @@
   min-height: fit-content;
   background-color: #ff0558;
   color: #fff7f4;
-  margin: 0.5rem 0 0 -4rem;
+  padding-bottom: 3rem;
 }
 
 /* Extra small devices (phones, less than 768px) */

@@ -11,7 +11,7 @@ export default function Layout({ children }) {
         <NavBar />
       </header>
       {children}
-      <footer className={styles.ft}>
+      <footer className={styles.footer}>
         <p>© Copyright 2024 Marina Ananias</p>
       </footer>
     </div>
