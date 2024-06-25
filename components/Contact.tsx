@@ -23,6 +23,7 @@ export default function Contact() {
           alt="Disco Globe"
           width={160}
           height={150}
+          priority={true}
           className={styles.disco}
         />
       </div>
