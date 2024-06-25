@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import AboutTransition from "../components/transitions/AboutTransition";
 import CodingTransition from "../components/transitions/CodingTransition";
-import MusicTransition from "../components/transitions/MusicTransition";
 import ContactTransition from "../components/transitions/ContactTransition";
 import Landing from "../components/Landing";
 import Layout from "../components/Layout";
@@ -9,6 +7,7 @@ import About from "../components/About";
 import Coding from "../components/Coding";
 import Music from "../components/Music";
 import Contact from "../components/Contact";
+import LogoTransition from "../components/transitions/LogoTransition";
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState("landing");
@@ -30,7 +29,7 @@ export default function Home() {
         setCurrentSection("landing");
       } else if (
         aboutSection &&
-        aboutSection.getBoundingClientRect().top <= threshold
+        aboutSection.getBoundingClientRect().bottom >= threshold
       ) {
         setCurrentSection("about");
       } else if (
@@ -60,11 +59,11 @@ export default function Home() {
   return (
     <Layout>
       <Landing id="landing" />
-      {currentSection === "about" && <AboutTransition id={"about"} />}
+      {currentSection === "about" && <LogoTransition id={"about"} />}
       <About id="about" />
       {currentSection === "coding" && <CodingTransition id={"coding"} />}
       <Coding id="coding" />
-      {currentSection === "music" && <MusicTransition id={"music"} />}
+      {currentSection === "music" && <LogoTransition id={"music"} />}
       <Music id="music" />
       {currentSection === "contact" && <ContactTransition id={"contact"} />}
       <Contact id="contact" />

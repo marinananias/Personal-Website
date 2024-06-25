@@ -8,12 +8,19 @@
   background-color: #ec297b;
 }
 
+.music {
+  background-color: #f1c061;
+}
+
 .coding {
   background-color: #039490;
 }
-
-/* .codingTxt1 {
+.codingTxt1 {
+  font-size: 8rem;
+  color: rgba(255, 247, 244, 0.5);
 }
 
 .codingTxt2 {
-} */
+  font-size: 8rem;
+  color: #fff7f4;
+}

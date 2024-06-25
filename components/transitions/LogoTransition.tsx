@@ -15,9 +15,9 @@ const imagePositions = [
   { top: "78%", left: "65%" },
 ];
 
-export default function AboutTransition({ id }) {
+export default function LogoTransition({ id }) {
   return (
-    <div id={id} className={`${styles.subContainer} ${styles.about}`}>
+    <div id={id} className={`${styles.subContainer} ${styles[id]}`}>
       {imagePositions.map((position, idx) => (
         <img
           key={idx}
