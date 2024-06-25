@@ -45,6 +45,12 @@ export default function Contact() {
           <p>ananias.marina@gmail.com</p>
         </a>
       </div>
+      <div className={styles.txtBox}>
+        <p className={styles.txt}>I WOULD LOVE TO</p>
+        <p className={styles.txt}>
+          <u>HEAR</u> FROM YOU
+        </p>
+      </div>
     </section>
   );
 }
