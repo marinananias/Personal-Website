@@ -2,9 +2,9 @@ import React from "react";
 import Image from "next/image";
 import styles from "../styles/landing.module.css";
 
-export default function Landing() {
+export default function Landing({ id }) {
   return (
-    <section id="landing" className={styles.subContainer}>
+    <section id={id} className={styles.subContainer}>
       <div className={styles.logoContainer}>
         <Image
           src="/images/logoShw.svg"
