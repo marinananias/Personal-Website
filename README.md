@@ -15,7 +15,7 @@ This project is a personal website built using TypeScript, React, Next.js, and N
 | Yellow Mustard       | ![#f1c061](https://via.placeholder.com/10/f1c061?text=+) #f1c061 |
 | Pinkish Beige        | ![#fff7f4](https://via.placeholder.com/10/fff7f4?text=+) #fff7f4 |
 | Light Grayish Violet | ![#eae8eb](https://via.placeholder.com/10/eae8eb?text=+) #eae8eb |
-| Dark Gray            | ![#3c3c3c](https://via.placeholder.com/10/3c3c3c?text=+) #3c3c3c |
+| Dark Gray            | ![#332e2e](https://via.placeholder.com/10/332e2e?text=+) #332e2e |
 
 ## Font Reference
 
