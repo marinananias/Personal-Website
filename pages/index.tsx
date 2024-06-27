@@ -1,72 +1,49 @@
 import React, { useState, useEffect } from "react";
-import CodingTransition from "../components/transitions/CodingTransition";
-import ContactTransition from "../components/transitions/ContactTransition";
-import Landing from "../components/Landing";
-import Layout from "../components/Layout";
 import About from "../components/About";
 import Coding from "../components/Coding";
-import Music from "../components/Music";
 import Contact from "../components/Contact";
+import Landing from "../components/Landing";
+import Layout from "../components/Layout";
+import Music from "../components/Music";
+import CodingTransition from "../components/transitions/CodingTransition";
+import ContactTransition from "../components/transitions/ContactTransition";
 import LogoTransition from "../components/transitions/LogoTransition";
+// import { animateScroll as scroll, scroller } from "react-scroll";
+
+// const navigationItems = [
+//   { label: "Home", to: "landing" },
+//   { label: "About Me", to: "about" },
+//   { label: "Coding", to: "coding" },
+//   { label: "Making Music", to: "music" },
+//   { label: "Contact Me", to: "contact" },
+// ];
+
+// const [value, setValue] = useState(0);
+
+// const handleChange = (event, newValue) => {
+//   setValue(newValue);
+
+//   const item = navigationItems[newValue];
+
+//   scroller.scrollTo(item.to, {
+//     duration: 1000,
+//     delay: 0,
+//     smooth: "easeInOutQuart",
+//   });
+// };
 
 export default function Home() {
-  const [currentSection, setCurrentSection] = useState("landing");
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const landingSection = document.getElementById("landing");
-      const aboutSection = document.getElementById("about");
-      const codingSection = document.getElementById("coding");
-      const musicSection = document.getElementById("music");
-      const contactSection = document.getElementById("contact");
-
-      const threshold = window.innerHeight / 2;
-
-      if (
-        landingSection &&
-        landingSection.getBoundingClientRect().bottom >= threshold
-      ) {
-        setCurrentSection("landing");
-      } else if (
-        aboutSection &&
-        aboutSection.getBoundingClientRect().bottom >= threshold
-      ) {
-        setCurrentSection("about");
-      } else if (
-        codingSection &&
-        codingSection.getBoundingClientRect().top <= threshold
-      ) {
-        setCurrentSection("coding");
-      } else if (
-        musicSection &&
-        musicSection.getBoundingClientRect().top <= threshold
-      ) {
-        setCurrentSection("music");
-      } else if (
-        contactSection &&
-        contactSection.getBoundingClientRect().top <= threshold
-      ) {
-        setCurrentSection("contact");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <Layout>
-      <Landing id="landing" />
-      {currentSection === "about" && <LogoTransition id={"about"} />}
-      <About id="about" />
-      {currentSection === "coding" && <CodingTransition id={"coding"} />}
-      <Coding id="coding" />
-      {currentSection === "music" && <LogoTransition id={"music"} />}
-      <Music id="music" />
-      {currentSection === "contact" && <ContactTransition id={"contact"} />}
-      <Contact id="contact" />
+      <Landing id={"landing"} />
+      <LogoTransition id={"aboutTransition"} />
+      <About id={"about"} />
+      <CodingTransition id={"codingTransition"} />
+      <Coding id={"coding"} />
+      <LogoTransition id={"musicTransition"} />
+      <Music id={"music"} />
+      <ContactTransition id={"contactTransition"} />
+      <Contact id={"contact"} />
     </Layout>
   );
 }

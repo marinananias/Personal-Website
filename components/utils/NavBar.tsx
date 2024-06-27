@@ -25,7 +25,7 @@ export default function FixedBottomNavigation() {
     setValue(newValue);
     const item = navigationItems[newValue];
     scroller.scrollTo(item.to, {
-      duration: 800,
+      duration: 1000,
       delay: 0,
       smooth: "easeInOutQuart",
     });
