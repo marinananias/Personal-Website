@@ -60,7 +60,6 @@ const Links = styled(Typography)<Props>(({ section }) => ({
   justifyContent: "left",
   flexDirection: section === "coding" ? "row" : "column",
   alignItems: "center",
-  // alignItems: section === "coding" ? "center" : "left",
   color: section === "coding" ? "#332e2e" : "#fff7f4",
 }));
 

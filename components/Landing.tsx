@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import styles from "../styles/landing.module.css";
-import Transitions from "./transitions/Transitions";
-import LogoTransition from "./transitions/LogoTransition";
 
 export default function Landing({ id }) {
   return (
@@ -41,7 +39,7 @@ export default function Landing({ id }) {
           <Image
             src="/images/vNeedle.png"
             alt="Vinyl Needle"
-            width={300}
+            width={150}
             height={300}
             className={styles.vinylNeedle}
           />
