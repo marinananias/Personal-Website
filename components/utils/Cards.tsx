@@ -31,7 +31,7 @@ const CardCont = styled(CardContent)<Props>(({ section }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  alignItems: "left",
+  alignItems: section === "coding" ? "left" : "center",
   textAlign: "left",
   padding: "1rem",
   backgroundColor: section === "coding" ? "#FFF7F4" : "#EC297B",
@@ -59,7 +59,8 @@ const Links = styled(Typography)<Props>(({ section }) => ({
   fontWeight: "400",
   justifyContent: "left",
   flexDirection: section === "coding" ? "row" : "column",
-  alignItems: section === "coding" ? "center" : "left",
+  alignItems: "center",
+  // alignItems: section === "coding" ? "center" : "left",
   color: section === "coding" ? "#332e2e" : "#fff7f4",
 }));
 
@@ -82,31 +83,45 @@ export default function Cards({ title, image, link, section, audio }) {
         </TypographyTitle>
         <Links section={section}>
           {section === "coding" ? (
-            <IconButton
-              aria-label="github"
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{ color: "#3C3C3C" }}
-            >
-              <GitHubIcon />
-            </IconButton>
+            <>
+              <IconButton
+                aria-label="github"
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ color: "#3C3C3C" }}
+              >
+                <GitHubIcon />
+              </IconButton>
+              <a
+                href={link}
+                style={{
+                  color: "#332e2e",
+                  textDecoration: "underline",
+                  padding: "0",
+                }}
+              >
+                Learn More
+              </a>
+            </>
           ) : (
-            <audio controls>
-              <source src={audio} type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
+            <>
+              <a
+                href={link}
+                style={{
+                  color: "#fff7f4",
+                  textDecoration: "underline",
+                  padding: "0 0 1rem 1rem",
+                }}
+              >
+                Learn More
+              </a>
+              <audio controls>
+                <source src={audio} type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </>
           )}
-          <a
-            href={link}
-            style={{
-              color: section === "coding" ? "#332e2e" : "#fff7f4",
-              textDecoration: "underline",
-              padding: section === "coding" ? "0" : "1rem 0 0 1rem",
-            }}
-          >
-            Learn More
-          </a>
         </Links>
       </CardCont>
       {/* <CardActionArea>
