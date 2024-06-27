@@ -1,5 +1,6 @@
 import React from "react";
-import styles from "../../styles/transitions.module.css";
+import utils from "../../styles/utils.module.css";
+import styles from "../../styles/transitions/tLogo.module.css";
 
 const imagePositions = [
   { top: "10%", left: "20%" },
@@ -17,7 +18,7 @@ const imagePositions = [
 
 export default function LogoTransition({ id }) {
   return (
-    <div id={id} className={`${styles.subContainer} ${styles[id]}`}>
+    <div id={id} className={`${utils.transitionsSubContain} ${styles[id]}`}>
       {imagePositions.map((position, idx) => (
         <img
           key={idx}
