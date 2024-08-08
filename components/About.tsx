@@ -14,6 +14,14 @@ export default function About({ id }) {
       id={id}
       className={`${utils.subContainers} ${styles.subContainer}`}
     >
+      <div className={styles.titleBox}>
+        <div className={styles.title1}>
+          <h2>Abt.</h2>
+        </div>
+        <div className={styles.title2}>
+          <h2>Me</h2>
+        </div>
+      </div>{" "}
       <div className={styles.txt}>
         <p>
           Originally from Maceió-AL, Brazil, I'm currently pursuing a Bachelor's
@@ -44,26 +52,18 @@ export default function About({ id }) {
           shrines in Zelda.
         </p>
       </div>
-      <div className={styles.button} onClick={handleOpenResume} role="button">
-        Resume
-      </div>
-      <div className={styles.titlePhoto}>
-        <div className={styles.titleBox}>
-          <div className={styles.title1}>
-            <h2>Abt.</h2>
-          </div>
-          <div className={styles.title2}>
-            <h2>Me</h2>
-          </div>
-        </div>
+      <div className={styles.PhotoButton}>
         <Image
           className={styles.photo}
-          width={300}
-          height={300}
+          width={150}
+          height={150}
           priority={true}
           alt="Marina Ananias"
-          src="/images/profile.png"
+          src="/images/profileCircle.png"
         />
+        <div className={styles.button} onClick={handleOpenResume} role="button">
+          Resume
+        </div>
       </div>
     </section>
   );
